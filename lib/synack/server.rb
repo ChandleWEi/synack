@@ -6,8 +6,8 @@ module Synack
   class Server
 
     DEFAULT_OPTIONS = {
-      host: 'localhost',
-      port: 11113
+      :host => 'localhost',
+      :port => 11113
     }
 
     attr_reader :host, :port, :socket
@@ -36,7 +36,9 @@ module Synack
 
     def say(message)
       puts message
-      system "/Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier -message \"#{sanitize(message)}\""
+      # just use ruby gems
+      system "/usr/bin/terminal-notifier -message \"#{sanitize(message)}\""      
+      # system "/Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier -message \"#{sanitize(message)}\""
     end
 
   end

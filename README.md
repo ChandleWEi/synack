@@ -1,6 +1,8 @@
 synack
 ======
 
+This version for ruby 1.8.7 you need sudo gem install terminal-notifier
+
 Synack is a client/server wrapper for https://github.com/alloy/terminal-notifier that allows
 arbitrary messages to be sent to Mac OS X Mountain Lion's Notification Center.
 
